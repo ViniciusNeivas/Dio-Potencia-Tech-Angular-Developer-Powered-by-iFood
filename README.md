@@ -1,4 +1,4 @@
-# Repositório do Desafio de Projeto sobre Git/GitHub
+# Repositório do Bootcamp Dio - Potência Tech Angular Developer - Powered by iFood
 Repositório criado para o Desafio de Projeto
 
 ## Links Úteis
