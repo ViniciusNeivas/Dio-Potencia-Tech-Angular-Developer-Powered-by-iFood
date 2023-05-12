@@ -40,5 +40,19 @@ let boleto = ['Agua conta', 19.09, 3384342343];
 /// Array Método
 // Mesmos metodos para manipular do JS
 // Datas
-let birthday = new Date("22-06-2023 18:00");
+let birthday = new Date("2023-06-22 18:00");
 console.log(birthday.toString());
+// Funções 
+function addNummmber(x, y) {
+    return x + y;
+}
+let soma = addNummmber(4, 7);
+console.log(soma);
+function addHello(name) {
+    return `Hello ${name}`;
+}
+console.log(addHello('Vinícius'));
+function callToPhone(phone) {
+    return phone;
+}
+console.log(callToPhone(12123123123123));
