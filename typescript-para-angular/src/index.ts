@@ -99,9 +99,89 @@ async function getDatabase (id : number): Promise<string | number>{
     return `Vinícius`
 }
 
+// Interface (Type vc iterface)
 
+type robot = {
+    readonly id : number | string;
+    name : string;
+};
 
+interface robot2{
+    readonly id : number|string;
+    name : string;
+    sayHello(): string;
+}
 
+const bot : robot = {
+    id : '1',
+    name : "Megaman",
+}
 
+const bot1 : robot2 = {
+    id: '1',
+    name: "Megaman",
+    sayHello: function (): string {
+        throw new Error("Function not implemented.");
+    }
+}
+console.log(bot);
+console.log(bot1);
 
+class Pessoa implements robot2{
+    id: string | number;
+    name: string;
+
+    constructor(id: number|string, name: string){
+        this.id = id;
+        this.name = name;
+    }
+    sayHello() : string {
+        return `Helll I'm ${this.name}`;
+    } 
+}
+
+const p = new Pessoa(1, "Megamente");
+console.log(p.sayHello());
+
+// CLASSES
+
+// Data Modifiers
+    // public
+    // private - > Só pode ser acessado por dentro da classe
+    // protected - > Classes e subclasse conseguem ver
+
+class Character {
+    private name: string;
+    stregth: number;
+    skill: number
+
+    constructor(name: string, stregth: number, skill: number){
+        this.name = name;
+        this.stregth = stregth;
+        this.skill = skill;
+    }
+
+    attack(): void {
+        console.log(`Attack with ${this.stregth} points`);
+    }
+}
+
+// Superclass --- > Character
+//Subclass --- Magicia 
+class Magician extends Character{
+    magicPoints : number;
+    constructor(
+        name: string, 
+        stregth: number, 
+        skill: number, 
+        magicPoints: number
+        ){
+        super(name, stregth, skill);
+        this.magicPoints = magicPoints;
+    }
+}
+
+const p1 = new Character('Carlitos',10,98);
+const p2 = new Magician('Dr.Strange', 09, 30, 100);
+(p1.attack());
 
