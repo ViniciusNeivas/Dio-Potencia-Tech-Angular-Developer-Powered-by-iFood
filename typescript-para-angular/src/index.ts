@@ -182,6 +182,19 @@ class Magician extends Character{
 }
 
 const p1 = new Character('Carlitos',10,98);
-const p2 = new Magician('Dr.Strange', 09, 30, 100);
+const p2 = new Magician('Dr.Strange', 9, 30, 100);
 (p1.attack());
+
+
+//Generics
+function concatArray<T>(...itens : T []) : T[] {
+    return new Array().concat(...itens);
+}
+
+const numArray = concatArray<number[]>([1,5,6], [3]);
+const stgArray = concatArray<string[]>(["Vinícius","dos Santos"], ["Neivas"])
+console.log(numArray);
+console.log(stgArray);
+
+
 
