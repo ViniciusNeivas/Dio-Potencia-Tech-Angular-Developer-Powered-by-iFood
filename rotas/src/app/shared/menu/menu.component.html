@@ -1,0 +1,20 @@
+<div>
+    <ul class="container__menu">
+        <li>
+            <a 
+                [routerLink]="['/']"
+                [routerLinkActive]="['activated']"
+                [routerLinkActiveOptions]="{exact: true}">
+                Home    
+            </a>
+        </li>
+        <li>
+            <a 
+            [routerLink]="['/portfolio']"
+            [routerLinkActive]="['activated']"
+            [routerLinkActiveOptions]="{exact: true}">
+                Portfolio
+            </a>
+        </li>
+    </ul>
+</div>
